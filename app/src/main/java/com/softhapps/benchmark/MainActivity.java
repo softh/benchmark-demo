@@ -2,11 +2,14 @@ package com.softhapps.benchmark;
 
 import com.softhapps.benchamrk.R;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * @author softh
+ */
 public class MainActivity extends AppCompatActivity {
 
     Runnable runnable;
@@ -27,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Thread thread2 = new Thread(MainActivity.this.runnable2);
                 thread2.start();
-
             }
         });
 

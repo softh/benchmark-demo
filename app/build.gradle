@@ -27,6 +27,37 @@ android {
         }
     }
 }
+apply plugin: 'checkstyle'
+check.dependsOn 'runCheckstyle'
+checkstyle {
+    configFile = new File("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
+    toolVersion = '7.6.1'
+}
+
+def checkStylePath = file("${project.rootDir}/config/checkstyle")
+
+
+task runCheckstyle(type: Checkstyle) {
+    showViolations = true
+    configProperties.checkstyleConfigDir = "${project.rootDir}/config/checkstyle"
+    ignoreFailures = false
+    source 'src'
+    include '**/*.java'
+    include '**/*.cpp'
+    include '**/*.c'
+    include '**/*.h'
+    exclude '**/gen/**'
+    exclude '**/ApplicationProperties.java'
+    classpath = files()
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled false
+        html.enabled true
+        html.stylesheet resources.text.fromFile("${checkStylePath}/checkstyle.xsl")
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

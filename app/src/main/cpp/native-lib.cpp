@@ -13,7 +13,7 @@ extern "C"
 JNIEXPORT
 jlongArray
 JNICALL
-Java_com_softhapps_benchamrk_MainActivity_getSimplesAtkin(JNIEnv *env, jobject, jlong end_position) {
+Java_com_softhapps_benchmark_MainActivity_getSimplesAtkin(JNIEnv *env, jobject, jlong end_position) {
 #if defined(__arm__)
 #if defined(__ARM_ARCH_7A__)
 #if defined(__ARM_NEON__)
@@ -107,7 +107,7 @@ extern "C"
 JNIEXPORT
 jlongArray
 JNICALL
-Java_com_softhapps_benchamrk_MainActivity_getSimplesAks(JNIEnv *env, jobject, jlong start_position, jlong end_position) {
+Java_com_softhapps_benchmark_MainActivity_getSimplesAks(JNIEnv *env, jobject, jlong start_position, jlong end_position) {
 
 //#define size(a) (sizeof(a) / sizeof(*a))
 
@@ -162,7 +162,7 @@ extern "C"
 JNIEXPORT
 jlongArray
 JNICALL
-Java_com_softhapps_benchamrk_MainActivity_getSimplesMillerRabin(JNIEnv *env, jobject, jlong start_position,
+Java_com_softhapps_benchmark_MainActivity_getSimplesMillerRabin(JNIEnv *env, jobject, jlong start_position,
                                                                 jlong end_position) {
 
     int primes_counter = 0;
