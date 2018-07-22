@@ -233,6 +233,7 @@ Java_com_softhapps_benchamrk_MainActivity_getSimplesMillerRabin(JNIEnv *env, job
         }
     }
 
+    //todo: debug
     for(int i = 0; i < primes_counter;i++) {
         if(primes[i] == 0) {
             int sssaqa = 0;
