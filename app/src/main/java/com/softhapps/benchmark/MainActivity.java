@@ -1,4 +1,6 @@
-package com.softhapps.benchamrk;
+package com.softhapps.benchmark;
+
+import com.softhapps.benchamrk.R;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         runnable = new Runnable() {
             public void run() {
-                long[] a = getSimplesMillerRabin(1, 100);
+                long[] a = getSimplesMillerRabin(1, 10000);
                 int b = 0;
             }
         };

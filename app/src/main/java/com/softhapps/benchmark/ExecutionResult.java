@@ -1,4 +1,4 @@
-package com.softhapps.benchamrk;
+package com.softhapps.benchmark;
 
 import java.util.List;
 
